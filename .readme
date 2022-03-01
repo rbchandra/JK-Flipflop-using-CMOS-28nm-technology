@@ -1,0 +1,73 @@
+# Implementation of JK flipflop using 28nm CMOS Technology
+
+
+
+# Table of Content 
+- ABSTRACT 
+- INTRODUCTION
+- TOOLS USED
+- JK FF CIRCUIT DESIGN
+- NETLIST
+- ACKNOWLEDGEMENT 
+- REFERENCE 
+
+
+## ABSTRACT
+
+Flip-flop is a circuit that can be used to store one bit of data either one or zero. Flip-flops are fundamental building blocks of digital electronic systems. JK flipflop is very versatile and also the most 
+frequently used. JK flipflop can be made using either nor gates or nand gates. In this paper we design a JK flipflop using CMOS 28nm technology.
+
+# INTRODUCTION
+The J and K designations for the synchronous control inputs have no known significance. The functioning of JK flipflop is identical to that to that of SR flipflop except that it has no invalid states like that of the SR flipflop. The JK flip-flop augments the behaviour of the SR 
+flip-flop by interpreting the J = K = 1 condition as a "flip" or toggle.
+
+
+# TOOL USED
+
+- Synopsys Custom Compiler:  The Synopsys Custom Compiler™ design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
+
+- Synopsys Primewave:  PrimeWave™ Design Environment is a comprehensive and flexible environment for simulation setup and analysis of analog, RF, mixed-signal design, custom-digital and memory designs within the Synopsys Custom Design Platform. This tool helped in various types of simulations of the above designed circuit.
+
+- Synopsys 28nm PDK:  The Synopsys 28nm Process Design Kit(PDK) was used in creation and simulation of the above designed circuit.
+
+# JK FF CIRCUIT DESIGN
+
+
+
+- SCHEMATIC
+
+https://github.com/rbchandra/JK-Flipflop-using-CMOS-28nm-technology/blob/main/IMAGES/schematic.png
+
+                                                                                                                                                                                                                                                                                                                                                                            
+- SYMBOL
+
+ https://github.com/rbchandra/JK-Flipflop-using-CMOS-28nm-technology/blob/main/IMAGES/sym.png                                                                                                                                                                                                                                                                                                                                                                        
+
+- TESTBENCH SYMBOL
+ https://github.com/rbchandra/JK-Flipflop-using-CMOS-28nm-technology/blob/main/IMAGES/symbol.png  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+- PRIMEWAVE WINDOW
+
+https://github.com/rbchandra/JK-Flipflop-using-CMOS-28nm-technology/blob/main/IMAGES/prime.png   
+
+
+
+                                           
+
+# NETLIST
+https://github.com/rbchandra/JK-Flipflop-using-CMOS-28nm-technology/blob/main/IMAGES/netlist.txt 
+
+# AUTHOR
+R Bharath Chandra, MTech VLSI and Embedded Systems , Defence Institute of Advanced Technology, Pune, Maharashtra
+
+# ACKNOWLEDGEMENT 
+
+- Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
+- Synopsys, India
+- VLSI System Design(VSD) Corporation Private Limited India
+- Indian Institute of Technology, Hyderabad 
+- Cloud Based Analog IC Design Hackathon
+- Sameer Durgoji, NIT Karnataka
+- Chinmay panda, IIT Hyderabad
+
+
