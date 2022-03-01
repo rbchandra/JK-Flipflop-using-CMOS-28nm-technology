@@ -1,0 +1,77 @@
+*  Generated for: PrimeSim
+*  Design library name: cp_lib1
+*  Design cell name: jkff_tb
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Tue Mar  1 12:18:20 2022
+
+.global gnd!
+********************************************************************************
+* Library          : cp_lib1
+* Cell             : jkff
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt jkff clk gnd_1 j k q q_c vcc
+xm39 net173 q_c vcc vcc p105 w=0.1u l=0.03u nf=1 m=1
+xm38 net163 k vcc vcc p105 w=0.1u l=0.03u nf=1 m=1
+xm37 net165 clk net163 net163 p105 w=0.1u l=0.03u nf=1 m=1
+xm36 net188 q_c net165 net165 p105 w=0.1u l=0.03u nf=1 m=1
+xm35 net151 j vcc vcc p105 w=0.1u l=0.03u nf=1 m=1
+xm34 net153 clk net151 net151 p105 w=0.1u l=0.03u nf=1 m=1
+xm33 net173 q net153 net153 p105 w=0.1u l=0.03u nf=1 m=1
+xm42 net188 q vcc vcc p105 w=0.1u l=0.03u nf=1 m=1
+xm26 net137 q gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm31 net188 net173 net179 net179 n105 w=0.1u l=0.03u nf=1 m=1
+xm30 net173 q_c net137 net137 n105 w=0.1u l=0.03u nf=1 m=1
+xm29 net179 q_c gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm27 net179 k gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm24 net137 j gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm25 net137 clk gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+xm28 net179 clk gnd_1 gnd_1 n105 w=0.1u l=0.03u nf=1 m=1
+.ends jkff
+
+********************************************************************************
+* Library          : cp_lib1
+* Cell             : jkff_tb
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 clk gnd! j k q qb net33 jkff
+v1 net33 gnd! dc=3.3
+v4 k gnd! dc=0 pulse ( 1.8 0 0 0.01u 0.01u 20u 40u )
+v3 j gnd! dc=0 pulse ( 1.8 0 0 0.01u 0.01u 10u 20u )
+v2 clk gnd! dc=0 pulse ( 1.8 0 0 0.01u 0.01u 2u 4u )
+
+
+
+
+
+
+
+
+.tran '1u' '100u' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(j) v(k) v(q) v(qb) v(clk)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
